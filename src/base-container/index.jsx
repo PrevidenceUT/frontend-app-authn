@@ -11,6 +11,8 @@ import {
 } from './components/image-layout';
 import { AuthLargeLayout, AuthMediumLayout, AuthSmallLayout } from './components/welcome-page-layout';
 import { DEFAULT_LAYOUT, IMAGE_LAYOUT } from './data/constants';
+import logo from './logo.png';
+import { Helmet } from 'react-helmet';
 
 const BaseContainer = ({ children, showWelcomeBanner, username }) => {
   const [baseContainerVersion, setBaseContainerVersion] = useState(DEFAULT_LAYOUT);
@@ -54,9 +56,20 @@ const BaseContainer = ({ children, showWelcomeBanner, username }) => {
 
   return (
     <>
-      <div className="col-md-12 extra-large-screen-top-stripe" />
+      <Helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" 
+        rel="stylesheet"></link>
+      </Helmet>
+      
+      {/* <div className="col-md-12 extra-large-screen-top-stripe" /> */}
       <div className="layout">
-        <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
+        {/* <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
           {showWelcomeBanner ? <AuthSmallLayout username={username} /> : <DefaultSmallLayout />}
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.medium.minWidth} maxWidth={breakpoints.large.maxWidth - 1}>
@@ -64,9 +77,34 @@ const BaseContainer = ({ children, showWelcomeBanner, username }) => {
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.extraLarge.minWidth}>
           {showWelcomeBanner ? <AuthLargeLayout username={username} /> : <DefaultLargeLayout />}
-        </MediaQuery>
+        </MediaQuery> */}
+        
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
+          <div className="header">
+            <div className="logo_section">
+              <img src={logo} alt="logo image" />
+            </div>
+            <div className="link_section">
+            <a href="/authn/login">I already have an account</a>
+            </div>
+            <div className="btn_section">
+              <button>Contact Support</button>
+            </div>
+          </div>
+          <div className='outer_content'>
+            <p className="welcome-text-container">
+              <span className="welcome-text">Welcome to Omnia. Sign up it's <b>free</b></span>
+            </p>
+            <p className="text-container">
+              <span className="text">We are delighted that you want to start your journey </span>
+            </p>
+            <p className="text-container">
+              <span className="text">with us so we can help you be whole</span>
+            </p>
+          </div>
+
           {children}
+
         </div>
       </div>
     </>

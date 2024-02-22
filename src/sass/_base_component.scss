@@ -16,9 +16,13 @@
 .content {
   @include media-breakpoint-up('xl') {
     display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;      /* Center items horizontally */
     justify-content: center;
-    width: 50vw;
-    margin-top: 4rem;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0rem;
   }
 }
 
@@ -201,3 +205,130 @@
   border: 3px solid $accent-b;
   transform: rotate(102.02deg);
 }
+
+
+.outer_content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+// start header -------------------
+
+.header {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  margin-top: 0; /* Reset the default margin-top */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo_section{
+  width: 40px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 100px;
+}
+
+.link_section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #F8FCFF; /* Adjust the color as needed */
+
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin-left: 1200px;
+  
+}
+
+.btn_section {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+
+  width: fit-content; /* Adjust as needed */
+  height: 54px; /* Fixed height */
+  padding: 0 20px; /* Adjust as needed */
+  border-radius: 8px;
+  gap: 10px;
+
+  box-shadow: 0px 2px 4px 0px #7C9EBC80;
+
+  
+
+
+  background-color: #FFFFFF; /* Change to the desired color */
+  
+}
+
+.btn_section button {
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  border: none;
+  background: none;
+  color: #7C9EBC;
+}
+
+
+// End header -------------------
+
+
+
+
+
+// ------------------ Start -  content above the signup form ------------------- 
+
+.welcome-text-container {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.welcome-text{
+  color: white;
+  font-family: Lora;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  mix-blend-mode: lighten;  // To remove the bg effect from the font colour 
+}
+
+.text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+
+  .text{
+    color: #BBC3D9;
+
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    mix-blend-mode: lighten;  // To remove the bg effect from the font colour
+
+  }
+
+}
+// ------------------ End -  content above the signup form ------------------- 

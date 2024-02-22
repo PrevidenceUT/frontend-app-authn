@@ -271,6 +271,10 @@ const RegistrationPage = (props) => {
       <>
         <Helmet>
           <title>{formatMessage(messages['register.page.title'], { siteName: getConfig().SITE_NAME })}</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" 
+          rel="stylesheet"></link>
         </Helmet>
         <RedirectLogistration
           host={host}
@@ -289,6 +293,7 @@ const RegistrationPage = (props) => {
             <Spinner animation="border" variant="primary" id="tpa-spinner" />
           </div>
         ) : (
+          <div className='outer' >
           <div
             className={classNames(
               'mw-xs mt-3',
@@ -312,8 +317,9 @@ const RegistrationPage = (props) => {
                 shouldFetchUsernameSuggestions={!formFields.username.trim()}
                 handleChange={handleOnChange}
                 handleErrorChange={handleErrorChange}
-                errorMessage={errors.name}
-                helpText={[formatMessage(messages['help.text.name'])]}
+                className="registration-form-fields"
+                // errorMessage={errors.name}
+                // helpText={[formatMessage(messages['help.text.name'])]}
                 floatingLabel={formatMessage(messages['registration.fullname.label'])}
               />
               <EmailField
@@ -322,8 +328,9 @@ const RegistrationPage = (props) => {
                 confirmEmailValue={configurableFormFields?.confirm_email}
                 handleErrorChange={handleErrorChange}
                 handleChange={handleOnChange}
-                errorMessage={errors.email}
-                helpText={[formatMessage(messages['help.text.email'])]}
+                className="registration-form-fields"
+                // errorMessage={errors.email}
+                // helpText={[formatMessage(messages['help.text.email'])]}
                 floatingLabel={formatMessage(messages['registration.email.label'])}
               />
               <UsernameField
@@ -332,8 +339,9 @@ const RegistrationPage = (props) => {
                 value={formFields.username}
                 handleChange={handleOnChange}
                 handleErrorChange={handleErrorChange}
-                errorMessage={errors.username}
-                helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
+                className="registration-form-fields"
+                // errorMessage={errors.username}
+                // helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
                 floatingLabel={formatMessage(messages['registration.username.label'])}
               />
               {!currentProvider && (
@@ -342,7 +350,8 @@ const RegistrationPage = (props) => {
                   value={formFields.password}
                   handleChange={handleOnChange}
                   handleErrorChange={handleErrorChange}
-                  errorMessage={errors.password}
+                  className="registration-form-fields"
+                  // errorMessage={errors.password}
                   floatingLabel={formatMessage(messages['registration.password.label'])}
                 />
               )}
@@ -379,6 +388,7 @@ const RegistrationPage = (props) => {
                 />
               )}
             </Form>
+            </div>
           </div>
         )}
 

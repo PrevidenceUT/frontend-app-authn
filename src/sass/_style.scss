@@ -92,8 +92,8 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   background-color: $white !important;
   font-size: 0.875rem;
   line-height: 1.5;
-  height: 2.75rem;
-
+  height: 3.75rem;
+  width: 20rem;
 }
 
 .btn-social {
@@ -372,8 +372,18 @@ select.form-control {
 
 .form-group__form-field .form-control:not([value='']):not(:focus) ~
   .pgn__form-control-floating-label .pgn__form-control-floating-label-content {
-  font-size: 16px;
-}
+    font-size: 14px;
+  }
+  
+  .form-control {
+    font-family: Urbanist;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #7C9EBC;
+  }
 
 .pgn__form-group {
   margin-bottom: 1.75rem;
@@ -457,4 +467,57 @@ select.form-control {
 
 .pgn__form-control-decorator-trailing {
   right: 0 !important;
+}
+
+
+// to keep textbox lables verticaly in between
+.pgn__form-control-floating-label-text {
+  font-size: 14px;
+  display: flex;
+  align-items: center; /* Center text vertically */
+}
+
+
+// Horizontaly center the text boxes
+#registration-form {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 20rem; /* Set a max-width for the form */
+  margin: 0 auto; /* Center horizontally within the container */
+  padding-left: -10px;
+}
+.register-stateful-button-width {
+  width: 100%; /* Make the button fill the width of the form */
+  max-width: 200px; /* Set a max-width for the button */
+}
+
+
+// To fix the form textboxes not being in horizontaly centered
+.pgn__form-group {
+  display: flex;
+  align-items: center;
+}
+
+.nav-tabs {
+  border-bottom: 5px solid #e9e6e4;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+
+.pgn__form-control-decorator-group.has-floating-label input:focus + .pgn__form-control-floating-label .pgn__form-control-floating-label-text {
+  border-radius: 5px;
+}
+
+.pgn__form-control-floating-label-text {
+  background-color: black;
+  padding: 0 5px;  /* Adjust padding as needed */
+}
+
+.btn-icon .btn-icon-secondary .btn-icon-sm{
+  padding-top: 20px;
 }
