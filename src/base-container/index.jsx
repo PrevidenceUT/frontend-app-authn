@@ -11,7 +11,6 @@ import {
 } from './components/image-layout';
 import { AuthLargeLayout, AuthMediumLayout, AuthSmallLayout } from './components/welcome-page-layout';
 import { DEFAULT_LAYOUT, IMAGE_LAYOUT } from './data/constants';
-import logo from './logo.png';
 import { Helmet } from 'react-helmet';
 
 const BaseContainer = ({ children, showWelcomeBanner, username }) => {
@@ -80,28 +79,6 @@ const BaseContainer = ({ children, showWelcomeBanner, username }) => {
         </MediaQuery> */}
         
         <div className={classNames('content', { 'align-items-center mt-0': showWelcomeBanner })}>
-          <div className="header">
-            <div className="logo_section">
-              <img src={logo} alt="logo image" />
-            </div>
-            <div className="link_section">
-            <a href="/authn/login">I already have an account</a>
-            </div>
-            <div className="btn_section">
-              <button>Contact Support</button>
-            </div>
-          </div>
-          <div className='outer_content'>
-            <p className="welcome-text-container">
-              <span className="welcome-text">Welcome to Omnia. Sign up it's <b>free</b></span>
-            </p>
-            <p className="text-container">
-              <span className="text">We are delighted that you want to start your journey </span>
-            </p>
-            <p className="text-container">
-              <span className="text">with us so we can help you be whole</span>
-            </p>
-          </div>
 
           {children}
 

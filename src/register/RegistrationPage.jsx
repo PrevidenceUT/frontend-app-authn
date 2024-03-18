@@ -11,6 +11,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Skeleton from 'react-loading-skeleton';
+import logo from '../assets/logo.png';
 
 import ConfigurableRegistrationForm from './components/ConfigurableRegistrationForm';
 import RegistrationFailure from './components/RegistrationFailure';
@@ -288,6 +289,31 @@ const RegistrationPage = (props) => {
             getConfig().ENABLE_PROGRESSIVE_PROFILING_ON_AUTHN && !!Object.keys(optionalFields.fields).length
           }
         />
+        <div className="header">
+          <div className="logo_section">
+            <img src={logo} alt="logo image" />
+          </div>
+          <div className="link_section">
+          <a href="/authn/login">{formatMessage(messages['redirect.to.login'])}</a>
+          </div>
+          <div className="btn_section">
+            <button>Contact Support</button>
+          </div>
+        </div>
+        
+        <div className='outer_content'>
+        <p className="welcome-text-container">
+          <span className="welcome-text">{formatMessage(messages['signup.header'])}<b>{formatMessage(messages['signup.header.free'])}</b></span>
+        </p>
+        <p className="text-container">
+          <span className="text">{formatMessage(messages['signup.subheader.line1'])}</span>
+        </p>
+        <p className="text-container">
+          <span className="text">{formatMessage(messages['signup.subheader.line2'])}</span>
+        </p> <br/>
+      </div>
+
+
         {autoSubmitRegForm && !errorCode.type ? (
           <div className="mw-xs mt-5 text-center">
             <Spinner animation="border" variant="primary" id="tpa-spinner" />
@@ -318,8 +344,8 @@ const RegistrationPage = (props) => {
                 handleChange={handleOnChange}
                 handleErrorChange={handleErrorChange}
                 className="registration-form-fields"
-                // errorMessage={errors.name}
-                // helpText={[formatMessage(messages['help.text.name'])]}
+                errorMessage={errors.name}
+                helpText={[formatMessage(messages['help.text.name'])]}
                 floatingLabel={formatMessage(messages['registration.fullname.label'])}
               />
               <EmailField
@@ -329,8 +355,8 @@ const RegistrationPage = (props) => {
                 handleErrorChange={handleErrorChange}
                 handleChange={handleOnChange}
                 className="registration-form-fields"
-                // errorMessage={errors.email}
-                // helpText={[formatMessage(messages['help.text.email'])]}
+                errorMessage={errors.email}
+                helpText={[formatMessage(messages['help.text.email'])]}
                 floatingLabel={formatMessage(messages['registration.email.label'])}
               />
               <UsernameField
@@ -340,8 +366,8 @@ const RegistrationPage = (props) => {
                 handleChange={handleOnChange}
                 handleErrorChange={handleErrorChange}
                 className="registration-form-fields"
-                // errorMessage={errors.username}
-                // helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
+                errorMessage={errors.username}
+                helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
                 floatingLabel={formatMessage(messages['registration.username.label'])}
               />
               {!currentProvider && (
@@ -351,7 +377,7 @@ const RegistrationPage = (props) => {
                   handleChange={handleOnChange}
                   handleErrorChange={handleErrorChange}
                   className="registration-form-fields"
-                  // errorMessage={errors.password}
+                  errorMessage={errors.password}
                   floatingLabel={formatMessage(messages['registration.password.label'])}
                 />
               )}

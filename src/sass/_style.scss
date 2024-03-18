@@ -508,9 +508,11 @@ select.form-control {
   padding-top: 20px;
 }
 
-
+// Login & Register input field lable styles
 .pgn__form-control-decorator-group.has-floating-label input:focus + .pgn__form-control-floating-label .pgn__form-control-floating-label-text {
   border-radius: 5px;
+  // border: none; /* Remove the border */
+  // background-color: transparent; 
 }
 
 .pgn__form-control-floating-label-text {
@@ -520,4 +522,25 @@ select.form-control {
 
 .btn-icon .btn-icon-secondary .btn-icon-sm{
   padding-top: 20px;
+}
+
+// Horizontaly center the text boxes
+#sign-in-form {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 20rem; /* Set a max-width for the form */
+  margin: 0 auto; /* Center horizontally within the container */
+  // padding-left: -10px;
+  // margin-bottom: 4px;
+}
+
+
+.login-button-width {
+  width: 100%; /* Make the button fill the width of the form */
+  max-width: 20rem; /* Set a max-width for the button */
+}
+
+.pgn__form-control-floating-label-content{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
 }

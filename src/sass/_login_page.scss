@@ -1,3 +1,86 @@
 .login-button-width {
     min-width: 6rem;
+    margin-top: 20px;
+}
+
+
+// start header -------------------
+
+.header {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  margin-top: 0; /* Reset the default margin-top */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo_section{
+  width: 40px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 100px;
+}
+
+.link_section a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #F8FCFF; /* Adjust the color as needed */
+
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin-left: 1200px;
+  
+}
+
+.btn_section {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+
+  width: fit-content; /* Adjust as needed */
+  height: 54px; /* Fixed height */
+  padding: 0 20px; /* Adjust as needed */
+  border-radius: 8px;
+  gap: 10px;
+  box-shadow: 0px 2px 4px 0px #7C9EBC80;
+  background-color: #FFFFFF;
+  
+}
+
+.btn_section button {
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  border: none;
+  background: none;
+  color: #7C9EBC;
+}
+
+// End header -------------------
+
+// Setting the outer div width for login and register header
+.div1 {
+    width: 100%;
+}
+
+#registration-form {
+    margin: 0 auto; /* Set left and right margin to auto */
+    max-width: 400px; /* Set a max-width if you want to limit the form width */
+  }
+
+.mw-xs {
+    max-width: 5000px !important; // for fixing the issue where form was not loading in center
 }

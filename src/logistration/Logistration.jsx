@@ -91,7 +91,7 @@ const Logistration = (props) => {
 
   return (
     <BaseContainer>
-      <div>
+      <div className='div1'>
         {disablePublicAccountCreation
           ? (
             <>
@@ -109,7 +109,7 @@ const Logistration = (props) => {
             </>
           )
           : (
-            <div>
+            <div className='div2'>
               {/* {institutionLogin
                 ? (
                   <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>

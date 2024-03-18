@@ -212,83 +212,12 @@
   text-align: center;
 }
 
-
-// start header -------------------
-
-.header {
-  position: fixed;
-  top: 40px;
-  width: 100%;
-  margin-top: 0; /* Reset the default margin-top */
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+// To show error messages of login form fields below the fields
+.login-form-fields {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 16px !important;
 }
-
-.logo_section{
-  width: 40px; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 100px;
-}
-
-.link_section a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #F8FCFF; /* Adjust the color as needed */
-
-  font-family: Urbanist;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-  letter-spacing: 0em;
-  text-align: left;
-
-  margin-left: 1200px;
-  
-}
-
-.btn_section {
-  display: flex;
-  align-items: center;
-  margin-right: 100px;
-
-  width: fit-content; /* Adjust as needed */
-  height: 54px; /* Fixed height */
-  padding: 0 20px; /* Adjust as needed */
-  border-radius: 8px;
-  gap: 10px;
-
-  box-shadow: 0px 2px 4px 0px #7C9EBC80;
-
-  
-
-
-  background-color: #FFFFFF; /* Change to the desired color */
-  
-}
-
-.btn_section button {
-  font-family: Urbanist;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-  letter-spacing: 0em;
-  text-align: center;
-
-  border: none;
-  background: none;
-  color: #7C9EBC;
-}
-
-
-// End header -------------------
-
-
-
-
 
 // ------------------ Start -  content above the signup form ------------------- 
 
@@ -319,7 +248,6 @@
 
   .text{
     color: #BBC3D9;
-
     font-family: Urbanist;
     font-size: 16px;
     font-weight: 600;
@@ -327,8 +255,6 @@
     letter-spacing: 0em;
     text-align: center;
     mix-blend-mode: lighten;  // To remove the bg effect from the font colour
-
   }
-
 }
 // ------------------ End -  content above the signup form ------------------- 

@@ -216,6 +216,26 @@ const messages = defineMessages({
         + '{lineBreak}{lineBreak}Error Details:{lineBreak}{errorMessage}',
     description: 'Error message third party authentication pipeline fails',
   },
+  'redirect.to.register': {
+    id: 'redirect.to.register',
+    defaultMessage: "Don't have an account?",
+    description: 'To go to register page',
+  },
+  'contact.support': {
+    id: 'contact.support',
+    defaultMessage: 'Contact Support',
+    description: 'For contact support button',
+  },
+  'login.heading': {
+    id: 'login.heading',
+    defaultMessage: 'Login',
+    description: 'For contact support button',
+  },
+  'login.subheading': {
+    id: 'login.subheading',
+    defaultMessage: 'Enter your credentials',
+    description: 'For contact support button',
+  },
 });
 
 export default messages;

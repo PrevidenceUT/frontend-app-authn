@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Skeleton from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png';
 import AccountActivationMessage from './AccountActivationMessage';
 import {
   loginRemovePasswordResetBanner, loginRequest, loginRequestFailure, loginRequestReset, setLoginFormData,
@@ -242,6 +242,27 @@ class LoginPage extends React.Component {
           redirectUrl={this.props.loginResult.redirectUrl}
           finishAuthUrl={thirdPartyAuthContext.finishAuthUrl}
         />
+        <div className="header">
+        <div className="logo_section">
+          <img src={logo} alt="logo image" />
+        </div>
+        <div className="link_section">
+        <a href="/authn/register">{intl.formatMessage(messages['redirect.to.register'])}</a>
+        </div>
+        <div className="btn_section">
+          <button>{intl.formatMessage(messages['contact.support'])}</button>
+        </div>
+      </div>
+
+      <div className='outer_content'>
+        <p className="welcome-text-container">
+          <span className="welcome-text">{intl.formatMessage(messages['login.heading'])}</span>
+        </p>
+        <p className="text-container">
+          <span className="text">{intl.formatMessage(messages['login.subheading'])}</span>
+        </p>
+      </div>
+
         <div className="mw-xs mt-3">
           <ThirdPartyAuthAlert
             currentProvider={thirdPartyAuthContext.currentProvider}
@@ -260,6 +281,7 @@ class LoginPage extends React.Component {
               handleChange={(e) => this.setState({ emailOrUsername: e.target.value, isSubmitted: false })}
               handleFocus={this.handleOnFocus}
               handleBlur={this.handleOnBlur}
+              className="login-form-fields"
               errorMessage={this.state.errors.emailOrUsername}
               floatingLabel={intl.formatMessage(messages['login.user.identity.label'])}
             />
@@ -271,6 +293,7 @@ class LoginPage extends React.Component {
               handleChange={(e) => this.setState({ password: e.target.value, isSubmitted: false })}
               handleFocus={this.handleOnFocus}
               handleBlur={this.handleOnBlur}
+              className="login-form-fields"
               errorMessage={this.state.errors.password}
               floatingLabel={intl.formatMessage(messages['login.password.label'])}
             />

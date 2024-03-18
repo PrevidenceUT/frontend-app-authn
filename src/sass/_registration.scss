@@ -22,6 +22,36 @@
   text-align: center;
 }
 
+// Login button style
+.login-button-width {
+  min-width: 20rem;
+  height: 3.75rem;
+  width: 295px; /* Adjust as needed */
+  height: 54px; /* Adjust as needed */
+  padding: 18px 60px; /* Adjust padding as needed */
+  border-radius: 8px;
+  gap: 10px;
+
+  background-color: #00D2AD;
+  border: none;
+  box-shadow: 0px 2px 4px 0px #0077624D;
+
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+// Forgot password style
+.btn-link {
+  display: inline-block; /* Ensures that line-height affects the element */
+  margin-left: 90px;
+  margin-top: 5px;
+  font-size: 14px;
+  // color: white !important;
+}
 
 .pgn__form-autosuggest__wrapper > .pgn__form-group {
   margin-bottom: 0 !important;
@@ -128,3 +158,55 @@
     right: 0.5rem;
   }
 }
+
+.has-floating-label {
+  color: #7C9EBC !important;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+// To display error messages below the input fields
+.registration-form-fields {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 16px !important;
+}
+
+.pgn__form-control-description {
+  margin-top: 8px !important;
+}
+
+.pgn__form-text-invalid {
+  color: yellow !important;
+  font-family: Urbanist;
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.help-text-style {
+  color: white;
+  overflow: visible;
+  font-family: Urbanist;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 17px;
+  white-space: nowrap;
+  position: relative;
+}
+
+// .help-text-style::before {
+//   content: ''; /* Create a pseudo-element for the background */
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   border-radius: 2px;
+//   backdrop-filter: blur(1px); /* Adjust the blur value as needed */
+//   z-index: -1; /* Place it behind the text */
+// }

@@ -117,7 +117,11 @@ const PasswordField = (props) => {
   );
 
   return (
-    <Form.Group controlId={props.name} isInvalid={props.errorMessage !== ''}>
+    <Form.Group
+      controlId={props.name}
+      isInvalid={props.errorMessage !== ''}
+      className="registration-form-fields" // Added new class to password field to show error message below the field
+    >
       <OverlayTrigger key="tooltip" placement={placement} overlay={tooltip} show={showTooltip}>
         <Form.Control
           as="input"

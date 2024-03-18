@@ -61,7 +61,7 @@ const messages = defineMessages({
   // Form buttons
   'create.account.for.free.button': {
     id: 'create.account.for.free.button',
-    defaultMessage: 'Create an account for free',
+    defaultMessage: 'Sign Up',
     description: 'Label text for registration form submission button',
   },
   'registration.other.options.heading': {
@@ -205,6 +205,31 @@ const messages = defineMessages({
     id: 'did.you.mean.alert.text',
     defaultMessage: 'Did you mean',
     description: 'Did you mean alert suggestion',
+  },
+  'redirect.to.login': {
+    id: 'redirect.to.login',
+    defaultMessage: 'I already have an account',
+    description: 'To redirect to login page',
+  },
+  'signup.header': {
+    id: 'signup.header',
+    defaultMessage: "Welcome to Omnia. Sign up it's ",
+    description: 'Sign up header',
+  },
+  'signup.header.free': {
+    id: 'signup.header.free',
+    defaultMessage: "free",
+    description: 'Sign up header free',
+  },
+  'signup.subheader.line1': {
+    id: 'signup.subheader.line1',
+    defaultMessage: 'We are delighted that you want to start your journey',
+    description: 'Sign up subheader line 1',
+  },
+  'signup.subheader.line2': {
+    id: 'signup.subheader.line2',
+    defaultMessage: 'with us so we can help you be whole.',
+    description: 'Sign up subheader line 2',
   },
 });
 
