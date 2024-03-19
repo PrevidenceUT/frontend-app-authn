@@ -22,40 +22,9 @@
           src="<%= process.env.MARKETING_SITE_BASE_URL %>/optimizelyjs/<%= process.env.OPTIMIZELY_PROJECT_ID %>.js"
         ></script>
       <% } %>
-      <style>
-        html, body {
-          height: 100%;
-          width: 100%;
-          margin: 0;
-          padding: 0;
-        }
-
-        #root {
-        height: 100%;
-        position: relative;
-        background-image: url(/Figma_bg.png);
-        background-size: cover;
-        filter: brightness(1); 
-        }
-        
-        #root::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 50%;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 1) 100%),
-                  url(/fade.png);
-        background-size: cover;
-        opacity: 1; /* Adjust the opacity as needed */
-        mix-blend-mode: multiply;
-        pointer-events: none; /* Allow interaction with content behind */
-        }
-      </style>
   </head>
   <body>
-    <div id="root" style="background-image: url(/Figma_bg.png) ;">
+    <div id="root" >
     </div>
   </body>
 </html>

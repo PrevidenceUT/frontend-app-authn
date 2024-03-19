@@ -12,6 +12,7 @@ import {
 import { AuthLargeLayout, AuthMediumLayout, AuthSmallLayout } from './components/welcome-page-layout';
 import { DEFAULT_LAYOUT, IMAGE_LAYOUT } from './data/constants';
 import { Helmet } from 'react-helmet';
+import './index.scss';
 
 const BaseContainer = ({ children, showWelcomeBanner, username }) => {
   const [baseContainerVersion, setBaseContainerVersion] = useState(DEFAULT_LAYOUT);
@@ -67,7 +68,7 @@ const BaseContainer = ({ children, showWelcomeBanner, username }) => {
       </Helmet>
       
       {/* <div className="col-md-12 extra-large-screen-top-stripe" /> */}
-      <div className="layout">
+      <div className="layout" id="layout">
         {/* <MediaQuery maxWidth={breakpoints.small.maxWidth - 1}>
           {showWelcomeBanner ? <AuthSmallLayout username={username} /> : <DefaultSmallLayout />}
         </MediaQuery>
