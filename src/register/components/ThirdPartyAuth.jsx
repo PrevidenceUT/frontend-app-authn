@@ -4,7 +4,7 @@ import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import PropTypes from 'prop-types';
 import Skeleton from 'react-loading-skeleton';
-
+import './index.scss';
 import {
   RenderInstitutionButton,
   SocialAuthProviders,
@@ -29,7 +29,7 @@ const ThirdPartyAuth = (props) => {
   return (
     <>
       {((isEnterpriseLoginDisabled && isInstitutionAuthActive) || isSocialAuthActive) && (
-        <div className="mt-4 mb-3 h4">
+        <div className="tpa-header mt-4 mb-3 h4">
           {formatMessage(messages['registration.other.options.heading'])}
         </div>
       )}
@@ -45,7 +45,7 @@ const ThirdPartyAuth = (props) => {
             />
           )}
           {isSocialAuthActive && (
-            <div className="row m-0">
+            <div className="row m-0 d-flex justify-content-center">
               <SocialAuthProviders socialAuthProviders={providers} referrer={REGISTER_PAGE} />
             </div>
           )}

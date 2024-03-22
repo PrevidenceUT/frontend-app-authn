@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getConfig } from '@edx/frontend-platform';
+import { auth, getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { Icon } from '@edx/paragon';
 import { Login } from '@edx/paragon/icons';
@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 import messages from './messages';
 import { LOGIN_PAGE, SUPPORTED_ICON_CLASSES } from '../data/constants';
+import auth0logo from '../assets/auth0.svg';
 
 const SocialAuthProviders = (props) => {
   const { formatMessage } = useIntl();
@@ -26,7 +27,7 @@ const SocialAuthProviders = (props) => {
       id={provider.id}
       key={provider.id}
       type="button"
-      className={`btn-social btn-${provider.id} ${index % 2 === 0 ? 'mr-3' : ''}`}
+      className={`btn-social btn-tpa ${index % 2 === 0 ? '' : ''}`}
       data-provider-url={referrer === LOGIN_PAGE ? provider.loginUrl : provider.registerUrl}
       onClick={handleSubmit}
     >
@@ -37,14 +38,10 @@ const SocialAuthProviders = (props) => {
       )
         : (
           <div className="btn-tpa__font-container" aria-hidden="true">
-            {SUPPORTED_ICON_CLASSES.includes(provider.iconClass) ? (
-              <FontAwesomeIcon icon={['fab', provider.iconClass]} />)
-              : (
-                <Icon className="h-75" src={Login} />
-              )}
+            <img className='auth0-image' src={auth0logo} alt="auth0 logo" />
           </div>
         )}
-      <span id="provider-name" className="notranslate mr-auto pl-2" aria-hidden="true">{provider.name}</span>
+      <span id="provider-name" className="tpa-text notranslate mr-auto pl-2" aria-hidden="true">{provider.name}</span>
       <span className="sr-only">
         {referrer === LOGIN_PAGE
           ? formatMessage(messages['sso.sign.in.with'], { providerName: provider.name })

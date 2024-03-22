@@ -337,7 +337,7 @@ const RegistrationPage = (props) => {
               context={{ provider: currentProvider, errorMessage: thirdPartyAuthErrorMessage }}
             />
             <Form id="registration-form" name="registration-form">
-              <NameField
+              {/* <NameField
                 name="name"
                 value={formFields.name}
                 shouldFetchUsernameSuggestions={!formFields.username.trim()}
@@ -369,8 +369,8 @@ const RegistrationPage = (props) => {
                 errorMessage={errors.username}
                 helpText={[formatMessage(messages['help.text.username.1']), formatMessage(messages['help.text.username.2'])]}
                 floatingLabel={formatMessage(messages['registration.username.label'])}
-              />
-              {!currentProvider && (
+              /> */}
+              {/* {!currentProvider && (
                 <PasswordField
                   name="password"
                   value={formFields.password}
@@ -403,7 +403,7 @@ const RegistrationPage = (props) => {
                 }}
                 onClick={handleSubmit}
                 onMouseDown={(e) => e.preventDefault()}
-              />
+              /> */}
               {!registrationEmbedded && (
                 <ThirdPartyAuth
                   currentProvider={currentProvider}

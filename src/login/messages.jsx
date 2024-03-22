@@ -44,7 +44,7 @@ const messages = defineMessages({
   },
   'login.other.options.heading': {
     id: 'login.other.options.heading',
-    defaultMessage: 'Or sign in with:',
+    defaultMessage: 'OR',
     description: 'Text that appears above other sign in options like social auth buttons',
   },
   'non.compliant.password.title': {

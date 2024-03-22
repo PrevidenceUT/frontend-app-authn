@@ -544,3 +544,14 @@ select.form-control {
   align-items: center;
   margin-bottom: 4px;
 }
+
+// Remove the background of eye icon in the password field
+.pgn__form-control-decorator .btn-icon:hover {
+  background-color: transparent !important;
+  color: #7e0043 !important;
+}
+
+.btn-icon.btn-icon-secondary:focus {
+  outline: 0px transparent !important;
+  box-shadow: none !important;
+}

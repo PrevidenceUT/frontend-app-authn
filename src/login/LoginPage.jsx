@@ -171,7 +171,7 @@ class LoginPage extends React.Component {
       <>
         {(isSocialAuthActive || (isEnterpriseLoginDisabled && isInstitutionAuthActive))
           && (
-            <div className="mt-4 mb-3 h4">
+            <div className="tpa-header mt-4 mb-3 h4">
               {intl.formatMessage(messages['login.other.options.heading'])}
             </div>
           )}
@@ -194,7 +194,7 @@ class LoginPage extends React.Component {
               />
             )}
             {isSocialAuthActive && (
-              <div className="row m-0">
+              <div className="row m-0 d-flex justify-content-center">
                 <SocialAuthProviders socialAuthProviders={providers} />
               </div>
             )}
@@ -260,7 +260,7 @@ class LoginPage extends React.Component {
         </p>
         <p className="text-container">
           <span className="text">{intl.formatMessage(messages['login.subheading'])}</span>
-        </p>
+        </p> <br/>
       </div>
 
         <div className="mw-xs mt-3">
@@ -274,7 +274,7 @@ class LoginPage extends React.Component {
           {activationMsgType && <AccountActivationMessage messageType={activationMsgType} />}
           {this.props.resetPassword && !this.props.loginError ? <ResetPasswordSuccess /> : null}
           <Form name="sign-in-form" id="sign-in-form">
-            <FormGroup
+            {/* <FormGroup
               name="emailOrUsername"
               value={this.state.emailOrUsername}
               autoComplete="on"
@@ -319,7 +319,7 @@ class LoginPage extends React.Component {
               onClick={this.handleForgotPasswordLinkClickEvent}
             >
               {intl.formatMessage(messages['forgot.password'])}
-            </Link>
+            </Link> */}
             {this.renderThirdPartyAuth(providers, secondaryProviders, currentProvider, thirdPartyAuthApiStatus, intl)}
           </Form>
         </div>
